@@ -5,15 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="/css/main.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script defer>
-        const tooltips = document.querySelectorAll('.tt')
-        tooltips.forEach(t => {
-            new bootstrap.Tooltip(t)
-        })
-    </script>
     <title>Net Ninja Pro - the Book</title>
 </head>
 
@@ -275,10 +271,10 @@
         </div>
     </section>
     <!-- reviews list -->
-    <section id="reviews" class="bg-light">
+    <section id="reviews" class="bg-altlight">
         <div class="container-lg">
             <div class="text-center">
-                <h2><i class="bi bi-stars"></i>Book Reviews</h2>
+                <h2><i class="bi bi-stars text-altdark"></i>Book Reviews</h2>
                 <p class="lead">What my students have said about the book...</p>
             </div>
 
@@ -495,19 +491,26 @@
                 quis voluptatibus aut error possimus, tenetur natus magni quam voluptatem quae eligendi repudiandae
                 delectus
                 eaque!</p>
-                <!-- dropdown -->
-                <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
-                        Choose a book title
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="book-dropdown">
-                        <li><a class="dropdown-item" href="#">Become a React Superhero</a></li>
-                        <li><a class="dropdown-item" href="#">Conquering Vue.js</a></li>
-                        <li><a class="dropdown-item" href="#">Levelling up Your Next.js</a></li>
-                    </ul>
-                </div>
+            <!-- dropdown -->
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown"
+                    data-bs-toggle="dropdown">
+                    Choose a book title
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                    <li><a class="dropdown-item" href="#">Become a React Superhero</a></li>
+                    <li><a class="dropdown-item" href="#">Conquering Vue.js</a></li>
+                    <li><a class="dropdown-item" href="#">Levelling up Your Next.js</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
 </body>
 
 </html>
