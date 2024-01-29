@@ -70,8 +70,14 @@
                     <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
                         dignissimos?</p>
                     <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+                    <!-- open sidebar / offcanvas -->
+                    <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button"
+                        aria-controls="sidebar">
+                        Explore my other books
+                    </a>
                 </div>
                 <div class="col-md-5 text-center d-none d-md-block">
+                    <!-- tooltip -->
                     <span class="tt" data-bs-placement="bottom" title="Net Ninja Pro book cover">
                         <img src="images/assets/ebook-cover.png" class="img-fluid" alt="ebook">
                     </span>
@@ -369,14 +375,14 @@
     <!-- form-control, form-label, form-select, input-group, input-group-text -->
     <section id="contact">
         <div class="container-lg">
-    
+
             <div class="text-center">
                 <h2>Get in Touch</h2>
                 <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
-    
+
                     <form>
                         <label for="email" class="form-label">Email address:</label>
                         <div class="input-group mb-4">
@@ -386,7 +392,8 @@
                             <input type="text" id="email" class="form-control" placeholder="e.g. mario@example.com" />
                             <!-- tooltip -->
                             <span class="input-group-text">
-                                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                                <span class="tt" data-bs-placement="bottom"
+                                    title="Enter an email address we can reply to.">
                                     <i class="bi bi-question-circle text-muted"></i>
                                 </span>
                             </span>
@@ -416,7 +423,8 @@
                             </select>
                         </div>
                         <div class="mb-4 mt-5 form-floating">
-                            <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+                            <textarea class="form-control" id="query" style="height: 140px"
+                                placeholder="query"></textarea>
                             <label for="query">Your query...</label>
                         </div>
                         <div class="mb-4 text-center">
@@ -437,10 +445,13 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                    <p class="text-muted my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem
+                    <p class="text-muted my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                        exercitationem
                         voluptatibus porro, hic asperiores fuga illo voluptates obcaecati deleniti veritatis sunt saepe
-                        quasi deserunt ex ipsum. Est possimus, aspernatur, vitae eligendi rem odit quaerat, ipsum pariatur
-                        ratione maxime delectus fuga minus accusamus dolores iusto maiores accusantium cumque magnam placeat
+                        quasi deserunt ex ipsum. Est possimus, aspernatur, vitae eligendi rem odit quaerat, ipsum
+                        pariatur
+                        ratione maxime delectus fuga minus accusamus dolores iusto maiores accusantium cumque magnam
+                        placeat
                         quia!</p>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
                         Register for Updates
@@ -449,7 +460,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- modal itself -->
     <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
@@ -459,8 +470,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, exercitationem laboriosam nihil minus
-                        voluptatibus harum aliquam consequatur pariatur inventore dignissimos illum excepturi ratione ipsum
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, exercitationem laboriosam nihil
+                        minus
+                        voluptatibus harum aliquam consequatur pariatur inventore dignissimos illum excepturi ratione
+                        ipsum
                         sit iusto alias eligendi fugit laborum?</p>
                     <label for="modal-email" class="form-label">Your email address:</label>
                     <input type="text" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
@@ -469,6 +482,19 @@
                     <button type="button" class="btn btn-primary">Submit</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- side panel / offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In minima ducimus excepturi quasi tempore fugit
+                quis voluptatibus aut error possimus, tenetur natus magni quam voluptatem quae eligendi repudiandae
+                delectus
+                eaque!</p>
         </div>
     </div>
 </body>
