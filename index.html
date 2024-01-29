@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script defer>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
     <title>Net Ninja Pro - the Book</title>
 </head>
 
@@ -66,7 +72,9 @@
                     <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
                 </div>
                 <div class="col-md-5 text-center d-none d-md-block">
-                    <img src="./images/assets/ebook-cover.png" class="img-fluid" alt="ebook">
+                    <span class="tt" data-bs-placement="bottom" title="Net Ninja Pro book cover">
+                        <img src="images/assets/ebook-cover.png" class="img-fluid" alt="ebook">
+                    </span>
                 </div>
             </div>
         </div>
@@ -361,14 +369,14 @@
     <!-- form-control, form-label, form-select, input-group, input-group-text -->
     <section id="contact">
         <div class="container-lg">
-
+    
             <div class="text-center">
                 <h2>Get in Touch</h2>
                 <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
-
+    
                     <form>
                         <label for="email" class="form-label">Email address:</label>
                         <div class="input-group mb-4">
@@ -376,6 +384,12 @@
                                 <i class="bi bi-envelope-fill text-secondary"></i>
                             </span>
                             <input type="text" id="email" class="form-control" placeholder="e.g. mario@example.com" />
+                            <!-- tooltip -->
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
                         <label for="name" class="form-label">Name:</label>
                         <div class="mb-4 input-group">
@@ -383,6 +397,12 @@
                                 <i class="bi bi-person-fill text-secondary"></i>
                             </span>
                             <input type="text" id="name" class="form-control" placeholder="e.g. Mario" />
+                            <!-- tooltip -->
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory really...">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
                         <label for="subject" class="form-label">What is your question about?</label>
                         <div class="mb-4 input-group">
@@ -396,8 +416,7 @@
                             </select>
                         </div>
                         <div class="mb-4 mt-5 form-floating">
-                            <textarea class="form-control" id="query" style="height: 140px"
-                                placeholder="query"></textarea>
+                            <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
                             <label for="query">Your query...</label>
                         </div>
                         <div class="mb-4 text-center">
